@@ -15,11 +15,11 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element:<Layout> <Root /></Layout>,
   },
   {
     path: "/search",
-    element: <Search />,
+    element:<Layout> <Search /></Layout>,
   },
 ]);
 
@@ -28,9 +28,7 @@ const queryClient = new QueryClient();
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <Layout>
-        <RouterProvider router={router} />
-      </Layout>
+        <RouterProvider router={router} /> /
     </QueryClientProvider>
   </React.StrictMode>,
 );
