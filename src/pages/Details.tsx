@@ -9,7 +9,7 @@ const Details = () => {
 
   const movie = useMemo(() => {
     if(!isSuccess || !movies) return;
-    return movies.movies.find((movie: unknown) => movie.id == Number(id));
+    return movies.movies.find((movie: any) => movie.id == Number(id));
 
     },[movies,id, isSuccess]
   )

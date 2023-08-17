@@ -11,8 +11,8 @@ const {data: movies, isSuccess} = useListMovies();
       {isSuccess && (
         <>
         <MovieList title="" movies={movies.movies} />
-        <MovieList title="Drama" movies={movies.movies.filter((movie: unknown) => movie.genres.includes("Drama")) } />
-        <MovieList title="Family" movies={movies.movies.filter((movie: unknown) => movie.genres.includes("Family")) } />
+        <MovieList title="Drama" movies={movies.movies.filter((movie: any) => movie.genres.includes("Drama")) } />
+        <MovieList title="Family" movies={movies.movies.filter((movie: any) => movie.genres.includes("Family")) } />
       </>)}
     </>
   );
