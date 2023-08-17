@@ -1,6 +1,12 @@
+import Header from "./components/Header";
+
 const App = () => (
-  <div className="App">
-    <p className="text-2xl">The React-Vite-TS-Tailwind-Eslint template</p>
+  <div className="App ">
+    <Header />
+    <main className={"max-w-[1200px]"}>
+
+      <h1 className="text-3xl font-bold">OUR MOVIES</h1>
+    </main>
   </div>
 );
 
