@@ -8,7 +8,12 @@ const {data: movies, isSuccess} = useListMovies();
   return(
     <>
     <h1 className="text-3xl font-bold mb-6">OUR MOVIES</h1>
-      {isSuccess && <MovieList title="" movies={movies.movies} />}
+      {isSuccess && (
+        <>
+        <MovieList title="" movies={movies.movies} />
+        <MovieList title="Drama" movies={movies.movies.filter((movie: unknown) => movie.genres.includes("Drama")) } />
+        <MovieList title="Family" movies={movies.movies.filter((movie: unknown) => movie.genres.includes("Family")) } />
+      </>)}
     </>
   );
 }

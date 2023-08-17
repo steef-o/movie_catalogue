@@ -11,6 +11,7 @@ import {
 import Search from "./pages/Search";
 import Layout from "./components/Layout";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Details from "./pages/Details";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/search",
     element:<Layout> <Search /></Layout>,
+  },
+  {
+    path: "/movie/:id",
+    element:<Layout> <Details/></Layout>,
   },
 ]);
 
