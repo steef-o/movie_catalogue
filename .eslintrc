@@ -339,7 +339,7 @@
     "@typescript-eslint/no-dupe-class-members": ["error"],
 
     "no-duplicate-imports": "off",
-    "@typescript-eslint/no-duplicate-imports": ["warn"],
+    "@typescript-eslint/no-duplicate-imports": ["off"],
     // Consider turning this on? Can be annoying in some cases
     "no-empty-function": "off",
     "@typescript-eslint/no-empty-function": "off",
@@ -362,7 +362,7 @@
     // Requires Promise-like values to be handled appropriately
     "@typescript-eslint/no-floating-promises": "warn",
     // Disallow usage of the implicit any type in catch clauses, use unknown instead
-    "@typescript-eslint/no-implicit-any-catch": "warn",
+    "@typescript-eslint/no-implicit-any-catch": "off",
     // Disallows explicit type declarations for variables initialized to a number, string, or boolean
     "@typescript-eslint/no-inferrable-types": [
       "warn",
