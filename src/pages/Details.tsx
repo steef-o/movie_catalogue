@@ -15,7 +15,6 @@ const Details = () => {
     },[movies,id, isSuccess]
   )
 
-  console.log(movie);
   return (
     <>
       {movie && (
