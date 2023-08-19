@@ -10,7 +10,7 @@ const Search = () => {
 
   const filteredList = useMemo(() => {
     if (!movies) return [];
-    return movies.movies.filter((movie: any) => movie.title.toLowerCase().includes(search.toLowerCase()));
+    return movies.movies.filter((movie) => movie.title.toLowerCase().includes(search.toLowerCase()));
   }, [search]);
 
   const MAX_ELEMENTS_TO_SHOW = 4;
@@ -31,15 +31,15 @@ const Search = () => {
       <h2 className={"font-bold text-2xl text-center my-4"}>SUGGESTIONS</h2>
       <div className={"flex justify-center"}>
         <ul>
-          {movies.movies?.slice(0, MAX_ELEMENTS_TO_SHOW).map((movie: any) =>
+          {movies?.movies.slice(0, MAX_ELEMENTS_TO_SHOW).map((movie) =>
             <SearchSuggestion movie={movie} handleClick={handleClick} key={movie.id} />)}
         </ul>
         <ul>
-          {movies.movies?.slice(MAX_ELEMENTS_TO_SHOW, MAX_ELEMENTS_TO_SHOW * 2).map((movie: any) =>
+          {movies?.movies.slice(MAX_ELEMENTS_TO_SHOW, MAX_ELEMENTS_TO_SHOW * 2).map((movie) =>
             <SearchSuggestion movie={movie} handleClick={handleClick} key={movie.id} />)}
         </ul>
         <ul>
-          {movies.movies?.slice(MAX_ELEMENTS_TO_SHOW * 2, MAX_ELEMENTS_TO_SHOW * 3).map((movie: any) =>
+          {movies?.movies.slice(MAX_ELEMENTS_TO_SHOW * 2, MAX_ELEMENTS_TO_SHOW * 3).map((movie) =>
             <SearchSuggestion movie={movie} handleClick={handleClick} key={movie.id} />)}
         </ul>
       </div>

@@ -1,7 +1,8 @@
 import React from "react";
+import { Movie } from "../hooks/useListMovies";
 
 interface Props {
-  movie: any;
+  movie: Movie;
   handleClick: (e: React.MouseEvent<HTMLLIElement>) => void;
 }
 

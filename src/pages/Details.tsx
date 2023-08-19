@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo } from "react";
 import { useListMovies } from "../hooks/useListMovies";
 import { useParams } from "react-router-dom";
-import DetailsField from "./DetailsField";
+import DetailsField from "../components/DetailsField";
 
 
 const Details = () => {
@@ -10,7 +10,7 @@ const Details = () => {
 
   const movie = useMemo(() => {
     if(!isSuccess || !movies) return;
-    return movies.movies.find((movie: any) => movie.id == Number(id));
+    return movies.movies.find((movie) => movie.id == Number(id));
 
     },[movies,id, isSuccess]
   )

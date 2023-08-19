@@ -1,11 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Movie } from "../hooks/useListMovies";
 
 interface Props {
-  movie: any
+  movie: Movie
 }
 
-const Movie = ({movie}:Props) => {
+const MovieItem = ({movie}:Props) => {
   const navigate = useNavigate()
   return (
     <div className={"hover:cursor-pointer hover:transition hover:scale-105 hover:ease-in-out"}>
@@ -15,4 +16,4 @@ const Movie = ({movie}:Props) => {
   );
 };
 
-export default Movie;
+export default MovieItem;
