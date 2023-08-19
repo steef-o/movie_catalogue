@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo } from "react";
 import { useListMovies } from "../hooks/useListMovies";
 import { useParams } from "react-router-dom";
+import DetailsField from "./DetailsField";
 
 
 const Details = () => {
@@ -19,12 +20,13 @@ const Details = () => {
     <>
       {movie && (
         <div className={""}>
-        <img src={movie.posterUrl} className={"mx-auto w-4/12"} />
-          <div className={"bg-gray flex"}>
-            <p>{movie.title}</p>
-            <p>{movie.runtime}</p>
-            <p>{movie.year}</p>
-            <p>{movie.plot}</p>
+          <h1 className={"text-2xl font-bold mb-8"}>{movie.title}</h1>
+        <img src={movie.posterUrl} className={"mx-auto w-4/12 mb-8"} />
+          <div className={"bg-gray-100 min-h-[10rem] p-8"}>
+            <DetailsField label="Title" content={movie.title} />
+            <DetailsField label="Runtime" content={`${movie.runtime} min`} />
+            <DetailsField label="Year" content={movie.year} />
+            <DetailsField label="Plot" content={movie.plot} />
           </div>
       </div>
       )}

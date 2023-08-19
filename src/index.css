@@ -4,4 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
+#root {
+    @apply bg-yellow-50 min-h-screen;
+}
+
 /*Custom CSS*/
